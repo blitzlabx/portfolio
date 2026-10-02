@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blitz (A. Wahab) · Python developer & founder of BlitzCore</title>
+<meta name="description" content="Blitz (A. Wahab) is a software developer and founder building websites, apps, tools and software systems. Python first. CEO of BlitzCore, Blitz Tech and Neon Ways.">
+<meta name="author" content="A. Wahab (Blitz)">
+<meta name="keywords" content="Blitz, A. Wahab, BlitzCore, Blitz Tech, Neon Ways, Python developer, software developer, founder, web apps, portfolio">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0B0B0C">
+<link rel="canonical" href="https://YOUR-DOMAIN.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Blitz">
+<meta property="og:title" content="Blitz (A. Wahab) · Python developer & founder of BlitzCore">
+<meta property="og:description" content="Blitz (A. Wahab) is a software developer and founder building websites, apps, tools and software systems. Python first. CEO of BlitzCore, Blitz Tech and Neon Ways.">
+<meta property="og:url" content="https://YOUR-DOMAIN.com/">
+<meta property="og:image" content="https://YOUR-DOMAIN.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="BL⚡TZ logo with the text A. Wahab, software developer and founder">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blitz (A. Wahab) · Python developer & founder of BlitzCore">
+<meta name="twitter:description" content="Blitz (A. Wahab) is a software developer and founder building websites, apps, tools and software systems. Python first. CEO of BlitzCore, Blitz Tech and Neon Ways.">
+<meta name="twitter:image" content="https://YOUR-DOMAIN.com/og-image.png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://YOUR-DOMAIN.com/#website", "url": "https://YOUR-DOMAIN.com/", "name": "Blitz", "description": "Blitz (A. Wahab) is a software developer and founder building websites, apps, tools and software systems. Python first. CEO of BlitzCore, Blitz Tech and Neon Ways."}, {"@type": "Person", "@id": "https://YOUR-DOMAIN.com/#person", "name": "Blitz", "alternateName": ["A. Wahab"], "url": "https://YOUR-DOMAIN.com/", "image": "https://YOUR-DOMAIN.com/og-image.png", "jobTitle": "Software developer and founder", "description": "Blitz (A. Wahab) is a software developer and founder building websites, apps, tools and software systems. Python first. CEO of BlitzCore, Blitz Tech and Neon Ways.", "knowsAbout": ["Python", "JavaScript", "TypeScript", "React", "Next.js", "Rust", "Go", "C#"], "worksFor": [{"@type": "Organization", "name": "BlitzCore"}, {"@type": "Organization", "name": "Blitz Tech"}, {"@type": "Organization", "name": "Neon Ways"}], "sameAs": ["https://github.com/blitzlabx", "https://t.me/blitzlabx", "https://x.com/blitzlabx", "https://instagram.com/blitzlabx", "https://tiktok.com/@blitzlabx"]}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --bg:#0B0B0C; --bg2:#111113; --line:#232327; --line2:#333338;
+  --txt:#F4F3EF; --mut:#A8A8A0; --dim:#6F6F69;
+  --volt:#F5E003; --ink:#0B0B0C;
+  --fd:'Space Grotesk',sans-serif; --fm:'JetBrains Mono',monospace;
+  --e:cubic-bezier(.22,1,.36,1);
+  --pad:clamp(20px,5vw,72px);
+  color-scheme:dark;
+}
+/* ============ BASE ============ */
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+html,body{overflow-x:clip}
+body{background:var(--bg);color:var(--txt);font:400 16px/1.65 var(--fd);-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
+::selection{background:var(--volt);color:var(--ink)}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+input,select{font:inherit}
+img{display:block;max-width:100%}
+:focus-visible{outline:2px solid var(--volt);outline-offset:3px}
+main:focus{outline:none}
+html.lock,html.lock body{overflow:hidden}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:#26262B;border:2px solid var(--bg)}
+::-webkit-scrollbar-thumb:hover{background:var(--volt)}
+.mono{font-family:var(--fm);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:fixed;top:-60px;left:16px;z-index:300;background:var(--volt);color:var(--ink);padding:10px 16px;font-family:var(--fm);font-size:12px;transition:top .2s}
+.skip:focus{top:12px}
+.wrap{max-width:1240px;margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+.dotp{width:6px;height:6px;background:var(--volt);border-radius:50%;display:inline-block;animation:pl 1.6s infinite}
+.dotp.off{background:#D05237;animation:none}
+@keyframes pl{0%,100%{opacity:1}50%{opacity:.2}}
+
+/* ============ LOADER ============ */
+#ld{position:fixed;inset:0;z-index:200;background:var(--bg);display:grid;place-items:center;transition:opacity .45s,visibility .45s}
+#ld.off{opacity:0;visibility:hidden}
+.ldbox{display:flex;flex-direction:column;align-items:center;gap:18px}
+.ldbox svg{width:26px;height:38px;fill:var(--volt);animation:ldf 1.5s infinite}
+@keyframes ldf{0%,6%,9%,100%{opacity:1}7%{opacity:.1}8%{opacity:.7}}
+.ldtxt{font-family:var(--fm);font-size:10px;letter-spacing:.16em;color:var(--dim);text-transform:uppercase}
+.ldbar{width:140px;height:2px;background:var(--line);overflow:hidden;position:relative}
+.ldbar::after{content:"";position:absolute;top:0;left:0;width:36%;height:100%;background:var(--volt);animation:ldr 1.1s var(--e) infinite}
+@keyframes ldr{0%{transform:translateX(-110%)}100%{transform:translateX(300%)}}
+
+/* ============ HEADER ============ */
+.hdr{position:fixed;top:0;left:0;right:0;z-index:100;height:62px;background:rgba(11,11,12,.8);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hdr .wrap{height:100%;display:flex;align-items:center;gap:26px}
+.logo{font-weight:700;font-size:19px;letter-spacing:-.03em;display:inline-flex;align-items:baseline}
+.lbolt svg{width:.55em;height:.78em;fill:var(--volt);display:inline-block;transform:translateY(.03em);margin:0 .015em}
+.nav{margin-left:auto;display:flex;gap:26px}
+.nav a{font-family:var(--fm);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);position:relative;padding:6px 0;transition:color .2s}
+.nav a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--volt);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--e)}
+.nav a:hover{color:var(--txt)}
+.nav a:hover::after,.nav a.on::after{transform:scaleX(1)}
+.nav a.on{color:var(--txt)}
+/* volt gauge */
+.gauge{display:flex;align-items:center;gap:9px;color:var(--dim);font-family:var(--fm);font-size:10px;letter-spacing:.1em}
+.gauge .gb{width:10px;height:14px;fill:var(--dim);transition:fill .3s}
+.gauge.full .gb{fill:var(--volt)}
+.ticks{display:flex;gap:2px}
+.ticks i{width:3px;height:10px;background:var(--line2);transition:background .25s}
+.ticks i.f{background:var(--volt)}
+.gauge.full .gv{color:var(--volt)}
+.gv{min-width:36px;text-align:right}
+.burger{display:none;margin-left:auto;width:40px;height:40px;position:relative}
+.burger span{position:absolute;left:9px;right:9px;height:2px;background:var(--txt);transition:transform .3s var(--e),top .3s var(--e)}
+.burger span:nth-child(1){top:15px}
+.burger span:nth-child(2){top:23px}
+.burger[aria-expanded="true"] span:nth-child(1){top:19px;transform:rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){top:19px;transform:rotate(-45deg)}
+
+/* ============ MOBILE MENU ============ */
+#menu{position:fixed;inset:0;z-index:90;background:var(--bg);transform:translateY(-102%);transition:transform .5s var(--e);display:flex;flex-direction:column;justify-content:center;padding:80px var(--pad) 40px}
+#menu.open{transform:none}
+.ml a{display:flex;align-items:baseline;gap:18px;font-size:clamp(36px,9vw,60px);font-weight:700;letter-spacing:-.03em;padding:16px 0;border-bottom:1px solid var(--line);opacity:0;transform:translateY(18px);transition:opacity .5s var(--e),transform .5s var(--e)}
+.ml a .n{font-family:var(--fm);font-size:11px;color:var(--volt);letter-spacing:.14em}
+.ml a:active,.ml a:hover{color:var(--volt)}
+#menu.open .ml a{opacity:1;transform:none;transition-delay:calc(.1s + var(--i)*.06s)}
+.msoc{display:flex;gap:12px;margin-top:36px;opacity:0;transition:opacity .5s .4s}
+#menu.open .msoc{opacity:1}
+.msoc a{width:46px;height:46px;border:1px solid var(--line2);display:grid;place-items:center}
+.msoc svg{width:18px;height:18px;fill:var(--mut)}
+.msoc a:hover svg{fill:var(--volt)}
+
+/* ============ REVEAL ============ */
+[data-reveal]{opacity:0;transform:translateY(16px);transition:opacity .65s var(--e),transform .65s var(--e);transition-delay:calc(var(--i,0)*70ms)}
+[data-reveal].in{opacity:1;transform:none}
+
+/* ============ HERO ============ */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding-top:130px;background-image:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"><circle cx="1.2" cy="1.2" r="1.2" fill="%23FFFFFF" fill-opacity=".045"/></svg>')}
+#arc{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero .wrap{position:relative;width:100%}
+.live-row{display:flex;align-items:center;gap:10px;font-family:var(--fm);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);flex-wrap:wrap}
+.live-row b{color:var(--mut);font-weight:400}
+.hw{font-weight:700;font-size:clamp(64px,17.5vw,206px);line-height:.95;letter-spacing:-.045em;margin:18px 0 26px}
+.hw .lm{display:inline-block;overflow:hidden;vertical-align:bottom}
+.hw .l{display:inline-block;transform:translateY(114%);transition:transform .8s var(--e)}
+.hw.go .l{transform:none}
+.hw .lm:nth-child(1) .l{transition-delay:.05s}
+.hw .lm:nth-child(2) .l{transition-delay:.12s}
+.hw .lm:nth-child(3) .l{transition-delay:.19s}
+.hw .lm:nth-child(4) .l{transition-delay:.26s}
+.hw .lm:nth-child(5) .l{transition-delay:.33s}
+.lbolt svg{animation:nflick 7.5s infinite .9s}
+@keyframes nflick{0%,90%,94.5%,100%{opacity:1}91%{opacity:.08}92.5%{opacity:.85}94%{opacity:.2}}
+.tagchip{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line2);padding:8px 14px;font-family:var(--fm);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.tagchip svg{width:10px;height:14px;fill:var(--volt)}
+.hsub{max-width:54ch;color:var(--mut);font-size:clamp(15px,1.7vw,19px);margin:26px 0 34px}
+.hsub a{color:var(--txt);border-bottom:1px solid var(--line2);transition:border-color .2s,color .2s}
+.hsub a:hover{color:var(--volt);border-color:var(--volt)}
+.hcta{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--fm);font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:15px 24px;border:1px solid var(--line2);transition:border-color .2s,color .2s,background .2s,filter .2s}
+.btn svg{width:13px;height:13px;transition:transform .25s var(--e)}
+.btn:hover{border-color:var(--volt);color:var(--volt)}
+.btn:hover svg{transform:translate(2px,-2px)}
+.btn.pri{background:var(--volt);border-color:var(--volt);color:var(--ink)}
+.btn.pri:hover{color:var(--ink);filter:brightness(1.07)}
+.hstats{display:flex;border-top:1px solid var(--line);margin-top:clamp(44px,6vw,76px)}
+.hs{flex:1;padding:20px 24px 26px 0;border-right:1px solid var(--line)}
+.hs:last-child{border-right:0}
+.hs .k{font-family:var(--fm);font-size:9px;letter-spacing:.18em;color:var(--dim);text-transform:uppercase;display:block;margin-bottom:8px}
+.hs .v{font-size:clamp(20px,2.6vw,30px);font-weight:600;letter-spacing:-.02em;line-height:1}
+@media(max-width:560px){.hs{padding:16px 12px 20px 0}.hs .v{font-size:17px}}
+
+/* ============ MARQUEE ============ */
+.marq{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:13px 0}
+.mtrack{display:flex;width:max-content;animation:mar 30s linear infinite}
+.marq:hover .mtrack{animation-play-state:paused}
+.mhalf{display:flex;gap:0;padding-right:0}
+.mi{display:inline-flex;align-items:center;gap:26px;padding-right:26px;font-family:var(--fm);font-size:10px;letter-spacing:.2em;color:var(--dim);text-transform:uppercase;white-space:nowrap}
+.mi svg{width:9px;height:13px;fill:var(--volt)}
+@keyframes mar{to{transform:translateX(-50%)}}
+
+/* ============ SECTIONS ============ */
+.sec{padding:clamp(72px,9vw,128px) 0 0}
+.shead{display:flex;align-items:baseline;gap:18px;border-top:1px solid var(--line);padding-top:20px;margin-bottom:clamp(34px,4.5vw,58px);flex-wrap:wrap}
+.shead .n{font-family:var(--fm);font-size:11px;letter-spacing:.14em;color:var(--volt)}
+.shead h2{font-size:clamp(30px,4.6vw,54px);font-weight:700;letter-spacing:-.03em;line-height:1}
+.shead .src{margin-left:auto;font-family:var(--fm);font-size:10px;letter-spacing:.14em;color:var(--dim);text-transform:uppercase;text-align:right}
+.dstat{font-family:var(--fm);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);padding:36px 0;display:flex;align-items:center;gap:10px}
+.derr{border:1px dashed var(--line2);padding:26px;margin:10px 0}
+.derr p{font-family:var(--fm);font-size:11px;letter-spacing:.1em;color:var(--mut);text-transform:uppercase;margin-bottom:16px}
+.erow{display:flex;gap:10px;flex-wrap:wrap}
+.ext{display:inline-flex;gap:6px;align-items:center;border:1px solid var(--line2);padding:8px 12px;font-family:var(--fm);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);background:var(--bg);transition:border-color .2s,color .2s;cursor:pointer}
+.ext:hover{border-color:var(--volt);color:var(--volt)}
+.ext svg{width:11px;height:11px}
+
+/* about teaser */
+.agrid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:clamp(28px,5vw,72px);align-items:start}
+.agrid .lead{font-size:clamp(19px,2.2vw,25px);line-height:1.5;color:var(--txt);letter-spacing:-.01em}
+.agrid p+p{margin-top:20px;color:var(--mut)}
+.tlink{display:inline-flex;align-items:center;gap:8px;font-family:var(--fm);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--volt);margin-top:28px}
+.tlink svg{width:13px;height:13px;transition:transform .25s var(--e)}
+.tlink:hover svg{transform:translateX(4px)}
+.fig{position:relative;border:1px solid var(--line);padding:14px}
+.fig::before{content:"";position:absolute;top:-1px;left:-1px;width:16px;height:16px;border-top:2px solid var(--volt);border-left:2px solid var(--volt)}
+.fig::after{content:"";position:absolute;bottom:-1px;right:-1px;width:16px;height:16px;border-bottom:2px solid var(--volt);border-right:2px solid var(--volt)}
+.fig img{width:100%;filter:grayscale(1) contrast(1.05);transition:filter .4s}
+.fig:hover img{filter:none}
+.fig figcaption{display:flex;justify-content:space-between;font-family:var(--fm);font-size:9px;letter-spacing:.16em;color:var(--dim);text-transform:uppercase;padding-top:12px}
+.facts{margin-top:18px}
+.facts div{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding:10px 2px;font-family:var(--fm);font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+.facts dt{color:var(--dim)}
+.facts dd{color:var(--mut);text-align:right}
+@media(max-width:860px){.agrid{grid-template-columns:1fr}.afig{max-width:340px}}
+
+/* project rows */
+.plist{border-top:1px solid var(--line)}
+.proj{position:relative;display:grid;grid-template-columns:58px minmax(0,1fr) auto;gap:6px 24px;padding:26px 6px 26px 0;border-bottom:1px solid var(--line);transition:background .3s}
+.proj:hover{background:rgba(245,224,3,.035)}
+.proj .trace{position:absolute;top:-1px;left:0;height:1px;width:100%;background:var(--volt);transform:scaleX(0);transform-origin:left;transition:transform .55s var(--e)}
+.proj:hover .trace{transform:scaleX(1)}
+.pi{font-family:var(--fm);font-size:11px;color:var(--dim);padding-top:8px;letter-spacing:.1em;transition:color .25s}
+.proj:hover .pi{color:var(--volt)}
+.pm h3{font-size:clamp(20px,2.6vw,30px);font-weight:600;letter-spacing:-.02em;line-height:1.15;transition:color .25s;overflow-wrap:anywhere}
+.proj:hover .pm h3{color:var(--volt)}
+.plist.feat .proj:first-child .pm h3{font-size:clamp(28px,4.4vw,46px)}
+.pm p{color:var(--mut);max-width:66ch;margin-top:8px;font-size:15px;overflow-wrap:anywhere}
+.stretch{position:absolute;inset:0;z-index:1}
+.stretch:focus-visible{outline-offset:-2px}
+.pmeta{display:flex;flex-wrap:wrap;gap:12px 16px;align-items:center;justify-content:flex-end;font-family:var(--fm);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);position:relative;z-index:2;padding-top:6px}
+.pmeta .lg{display:inline-flex;gap:7px;align-items:center;color:var(--mut)}
+.pmeta .lg i{width:8px;height:8px;border-radius:50%;display:inline-block}
+.pmeta svg{width:11px;height:11px}
+.pmeta .st{display:inline-flex;gap:6px;align-items:center}
+@media(max-width:720px){
+  .proj{grid-template-columns:38px minmax(0,1fr)}
+  .pmeta{grid-column:2;justify-content:flex-start}
+}
+
+/* tech / language load */
+.lrow{display:grid;grid-template-columns:minmax(130px,210px) 1fr auto;align-items:center;gap:10px 26px;width:100%;text-align:left;padding:15px 6px;border-bottom:1px solid var(--line);transition:background .25s;cursor:pointer}
+.lrow:hover{background:rgba(245,224,3,.035)}
+.lrow .ln{font-family:var(--fm);font-size:13px;letter-spacing:.06em;transition:color .2s}
+.lrow:hover .ln{color:var(--volt)}
+.lrow .lc{font-family:var(--fm);font-size:10px;letter-spacing:.14em;color:var(--dim);text-transform:uppercase;text-align:right;white-space:nowrap}
+.met{display:flex;gap:3px;align-items:center;min-width:0;overflow:hidden}
+.met i{width:3px;height:16px;background:var(--line);flex:none}
+[data-reveal] .met i.f{background:var(--line)}
+[data-reveal].in .met i.f{background:var(--volt);transition:background .4s;transition-delay:calc(var(--s)*20ms)}
+.lnote{font-family:var(--fm);font-size:10px;letter-spacing:.14em;color:var(--dim);text-transform:uppercase;margin-top:22px}
+
+/* github section */
+.ggrid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,4vw,60px);align-items:start}
+.gcard{border:1px solid var(--line);padding:clamp(20px,3vw,30px)}
+.gcard .top{display:flex;gap:18px;align-items:center}
+.gcard img{width:76px;height:76px;filter:grayscale(1);transition:filter .4s}
+.gcard:hover img{filter:none}
+.gcard .gh-name{font-size:22px;font-weight:600;letter-spacing:-.02em}
+.gcard .gh-handle{font-family:var(--fm);font-size:11px;color:var(--volt);letter-spacing:.1em}
+.gcard .bio{color:var(--mut);font-size:14px;margin-top:16px;min-height:0}
+.gspec{margin-top:20px}
+.gspec div{display:flex;justify-content:space-between;padding:10px 0;border-top:1px solid var(--line);font-family:var(--fm);font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+.gspec dt{color:var(--dim)}.gspec dd{color:var(--txt)}
+.gcard .btn{margin-top:20px;width:100%;justify-content:center}
+.rlist .rk{font-family:var(--fm);font-size:10px;letter-spacing:.16em;color:var(--dim);text-transform:uppercase;padding-bottom:14px;display:block}
+.ritem{display:flex;align-items:baseline;gap:16px;padding:15px 4px;border-top:1px solid var(--line);transition:background .25s}
+.ritem:hover{background:rgba(245,224,3,.035)}
+.ritem .rn{font-size:17px;font-weight:500;letter-spacing:-.01em;transition:color .2s;overflow-wrap:anywhere}
+.ritem:hover .rn{color:var(--volt)}
+.ritem .rt{margin-left:auto;font-family:var(--fm);font-size:10px;letter-spacing:.12em;color:var(--dim);text-transform:uppercase;white-space:nowrap}
+.ritem .lg{display:inline-flex;align-items:center;gap:7px;font-family:var(--fm);font-size:10px;color:var(--dim);text-transform:uppercase;white-space:nowrap}
+.ritem .lg i{width:7px;height:7px;border-radius:50%}
+@media(max-width:860px){.ggrid{grid-template-columns:1fr}}
+
+/* blitzcore */
+.bc{position:relative;border:1px solid var(--line);padding:clamp(28px,5vw,60px);overflow:hidden}
+.bc::before{content:"";position:absolute;top:-1px;left:-1px;width:18px;height:18px;border-top:2px solid var(--volt);border-left:2px solid var(--volt)}
+.bc::after{content:"";position:absolute;bottom:-1px;right:-1px;width:18px;height:18px;border-bottom:2px solid var(--volt);border-right:2px solid var(--volt)}
+.bc .k{font-family:var(--fm);font-size:10px;letter-spacing:.18em;color:var(--volt);text-transform:uppercase}
+.bc h3{font-size:clamp(34px,6vw,74px);font-weight:700;letter-spacing:-.03em;line-height:1;margin:14px 0 18px;position:relative}
+.bcbolt{position:absolute;right:-30px;top:50%;height:130%;transform:translateY(-50%);pointer-events:none}
+.bcbolt svg{height:100%;width:auto;fill:none;stroke:var(--line);stroke-width:.6}
+.bc p{max-width:62ch;color:var(--mut);position:relative}
+.bcrepos{margin-top:26px;position:relative}
+.bcrepos .rk{font-family:var(--fm);font-size:10px;letter-spacing:.16em;color:var(--dim);text-transform:uppercase;display:block;margin-bottom:6px}
+.bcrepos a{display:inline-flex;align-items:center;gap:8px;font-family:var(--fm);font-size:12px;letter-spacing:.08em;border:1px solid var(--line2);padding:9px 13px;margin:6px 8px 0 0;transition:border-color .2s,color .2s;text-transform:uppercase}
+.bcrepos a:hover{border-color:var(--volt);color:var(--volt)}
+.bcrepos svg{width:11px;height:11px}
+
+/* contact strip (home) */
+.cstrip{display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap}
+.cstrip .cl h2{font-size:clamp(28px,4vw,46px);font-weight:700;letter-spacing:-.03em;line-height:1.05}
+.cstrip .cl p{color:var(--mut);margin-top:12px;max-width:44ch}
+.cbtns{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.ibtn{width:46px;height:46px;border:1px solid var(--line2);display:grid;place-items:center;transition:border-color .2s,transform .2s,color .2s;color:var(--mut)}
+.ibtn svg{width:17px;height:17px;fill:currentColor}
+.ibtn:hover{border-color:var(--volt);color:var(--volt);transform:translateY(-3px)}
+
+/* ============ INNER PAGE HEADS ============ */
+.phead{padding:150px 0 0}
+.crumb{display:inline-flex;align-items:center;gap:8px;font-family:var(--fm);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);transition:color .2s}
+.crumb:hover{color:var(--volt)}
+.crumb svg{width:12px;height:12px}
+.phead h1{font-size:clamp(42px,7.5vw,96px);font-weight:700;letter-spacing:-.04em;line-height:.98;margin:22px 0 18px;overflow-wrap:anywhere}
+.phead .sub{color:var(--mut);max-width:60ch}
+.phead .sub a{color:var(--txt);border-bottom:1px solid var(--line2)}
+.phead .sub a:hover{color:var(--volt);border-color:var(--volt)}
+
+/* projects page */
+.fbar{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:38px 0 8px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{font-family:var(--fm);font-size:10px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line2);padding:9px 13px;color:var(--mut);transition:all .2s;cursor:pointer}
+.chip:hover{border-color:var(--volt);color:var(--volt)}
+.chip.on{background:var(--volt);border-color:var(--volt);color:var(--ink)}
+.fsort{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.fsort input{background:var(--bg);border:1px solid var(--line2);color:var(--txt);font-family:var(--fm);font-size:11px;letter-spacing:.08em;padding:10px 12px;width:170px}
+.fsort input::placeholder{color:var(--dim)}
+.fsort select{background:var(--bg);border:1px solid var(--line2);color:var(--mut);font-family:var(--fm);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:10px 12px;cursor:pointer}
+.cnt{font-family:var(--fm);font-size:10px;letter-spacing:.16em;color:var(--dim);text-transform:uppercase;padding:14px 0}
+.empty{font-family:var(--fm);font-size:11px;letter-spacing:.12em;color:var(--dim);text-transform:uppercase;padding:44px 0;border-bottom:1px solid var(--line)}
+
+/* detail page */
+.dmeta{display:flex;flex-wrap:wrap;gap:12px 22px;font-family:var(--fm);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--dim);align-items:center}
+.dmeta .lg{display:inline-flex;align-items:center;gap:7px;color:var(--mut)}
+.dmeta .lg i{width:8px;height:8px;border-radius:50%}
+.dmeta svg{width:11px;height:11px}
+.dcta{display:flex;gap:12px;flex-wrap:wrap;margin:30px 0 10px}
+.dbody{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:clamp(30px,5vw,70px);margin-top:clamp(40px,5vw,64px);align-items:start}
+.dbody h4{font-family:var(--fm);font-size:10px;letter-spacing:.18em;color:var(--dim);text-transform:uppercase;border-top:1px solid var(--line);padding-top:16px;margin-bottom:16px}
+.dbody .ov{color:var(--mut);font-size:16px;max-width:60ch}
+.dbody .ov+.ov{margin-top:14px}
+.hl{list-style:none}
+.hl li{padding:10px 0 10px 22px;border-bottom:1px solid var(--line);color:var(--mut);font-size:15px;position:relative}
+.hl li::before{content:"";position:absolute;left:0;top:19px;width:10px;height:2px;background:var(--volt)}
+.spec div{display:flex;gap:20px;padding:11px 0;border-bottom:1px solid var(--line);font-family:var(--fm);font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+.spec .sk{width:120px;flex:none;color:var(--dim)}
+.spec .sv{color:var(--txt)}
+.topi{display:flex;flex-wrap:wrap;gap:8px}
+.topi span{border:1px solid var(--line2);padding:5px 10px;font-family:var(--fm);font-size:9px;letter-spacing:.12em;color:var(--mut);text-transform:uppercase}
+.dshot{border:1px solid var(--line);padding:10px;margin-bottom:26px}
+.dshot img{width:100%}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:clamp(50px,7vw,90px)}
+.pn a{background:var(--bg);padding:22px;transition:background .25s;min-width:0}
+.pn a:hover{background:var(--bg2)}
+.pn .k{display:block;font-family:var(--fm);font-size:9px;letter-spacing:.18em;color:var(--dim);text-transform:uppercase;margin-bottom:8px}
+.pn strong{font-size:clamp(15px,2vw,20px);font-weight:600;letter-spacing:-.01em;display:block;overflow-wrap:anywhere}
+.pn a:last-child{text-align:right}
+.pn a:hover strong{color:var(--volt)}
+@media(max-width:860px){.dbody{grid-template-columns:1fr}}
+
+/* contact page rows */
+.clist{border-top:1px solid var(--line);margin-top:clamp(36px,5vw,60px)}
+.crow{display:grid;grid-template-columns:52px minmax(0,1fr) auto auto 30px;align-items:center;gap:20px;padding:24px 12px;border-bottom:1px solid var(--line);transition:background .22s;position:relative}
+.crow svg.pi-ic{width:20px;height:20px;fill:var(--mut);transition:fill .22s}
+.crow .cn{font-size:clamp(19px,2.6vw,27px);font-weight:600;letter-spacing:-.02em}
+.crow .ch{font-family:var(--fm);font-size:11px;letter-spacing:.1em;color:var(--mut);text-transform:uppercase;white-space:nowrap}
+.crow .cd{font-family:var(--fm);font-size:9px;letter-spacing:.14em;color:var(--dim);text-transform:uppercase;white-space:nowrap}
+.crow .ar{justify-self:end}
+.crow .ar svg{width:16px;height:16px;transition:transform .3s var(--e)}
+.crow:hover{background:var(--volt)}
+.crow:hover .cn,.crow:hover .ch,.crow:hover .cd{color:var(--ink)}
+.crow:hover svg.pi-ic{fill:var(--ink)}
+.crow:hover .ar svg{transform:translate(3px,-3px)}
+.best{border:1px solid var(--line2);padding:3px 8px;font-family:var(--fm);font-size:8px;letter-spacing:.16em;color:var(--dim);text-transform:uppercase;transition:border-color .2s,color .2s;margin-left:12px;vertical-align:middle}
+.crow:hover .best{border-color:var(--ink);color:var(--ink)}
+@media(max-width:640px){.crow{grid-template-columns:40px minmax(0,1fr) 26px;padding:20px 8px}.crow .cd,.crow .ch{display:none}.crow .ch.m{display:block}}
+
+/* about page */
+.ab-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:clamp(30px,5vw,72px);align-items:start}
+.ab-grid p{color:var(--mut);font-size:clamp(16px,1.8vw,18px)}
+.ab-grid p.lead{color:var(--txt);font-size:clamp(20px,2.4vw,26px);line-height:1.5;letter-spacing:-.01em}
+.ab-grid p+p{margin-top:22px}
+.pstack{margin-top:clamp(46px,6vw,80px)}
+.pstack h4{font-family:var(--fm);font-size:10px;letter-spacing:.18em;color:var(--dim);text-transform:uppercase;border-top:1px solid var(--line);padding-top:16px;margin-bottom:20px}
+.prin{counter-reset:pr}
+.prin li{list-style:none;display:grid;grid-template-columns:52px 1fr;gap:18px;padding:18px 0;border-bottom:1px solid var(--line);font-size:clamp(17px,2vw,21px);letter-spacing:-.01em}
+.prin li::before{counter-increment:pr;content:"0" counter(pr);font-family:var(--fm);font-size:11px;color:var(--volt);letter-spacing:.1em;padding-top:6px}
+@media(max-width:860px){.ab-grid{grid-template-columns:1fr}}
+
+/* 404 */
+.nfbox{padding:8px 0 20px}
+.nfbox p{color:var(--mut);max-width:50ch;margin:6px 0 28px}
+
+/* ============ FOOTER ============ */
+footer{border-top:1px solid var(--line);margin-top:clamp(80px,10vw,140px);padding:clamp(48px,7vw,90px) 0 34px}
+.fw{font-weight:700;font-size:clamp(56px,14.5vw,168px);line-height:1;letter-spacing:-.045em;color:transparent;-webkit-text-stroke:1px var(--line2);display:inline-flex;align-items:baseline;transition:color .45s,-webkit-text-stroke-color .45s;cursor:default}
+.fw svg{width:.55em;height:.78em;fill:none;stroke:var(--line2);stroke-width:1.4;transform:translateY(.03em);margin:0 .015em;transition:fill .45s,stroke .45s}
+.fw:hover{color:var(--volt);-webkit-text-stroke-color:var(--volt)}
+.fw:hover svg{fill:var(--volt);stroke:var(--volt)}
+.frow{display:flex;flex-wrap:wrap;gap:12px 30px;justify-content:space-between;font-family:var(--fm);font-size:9px;letter-spacing:.15em;color:var(--dim);text-transform:uppercase;margin-top:36px;align-items:baseline}
+.frow .sig{font-size:10px;color:#4E4E4A;letter-spacing:.12em}
+.frow a{color:var(--mut)}
+.frow a:hover{color:var(--volt)}
+
+/* ============ ROUTE TRANSITION ============ */
+#view{transition:opacity .18s ease,transform .18s ease;min-height:72vh;outline:none}
+#view.out{opacity:0;transform:translateY(10px)}
+
+/* ============ RESPONSIVE HEADER ============ */
+@media(max-width:880px){
+  .nav{display:none}
+  .burger{display:block}
+  .gauge{margin-left:auto}
+  .burger{margin-left:0}
+}
+@media(max-width:560px){.gv{display:none}.shead .src{display:none}}
+
+/* ============ REDUCED MOTION ============ */
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  [data-reveal]{opacity:1;transform:none}
+  .hw .l{transform:none}
+  .mtrack{animation:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#view">Skip to content</a>
+
+<div id="ld" role="status" aria-label="Loading">
+  <div class="ldbox">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.4 2.2 4.4 13.4h5.6l-1.2 8.4 9-11.2h-5.6l1.2-8.4Z"/></svg>
+    <div class="ldbar" aria-hidden="true"></div>
+    <span class="ldtxt" id="ldtxt">LOADING · BLITZ</span>
+  </div>
+</div>
+
+<header class="hdr">
+  <div class="wrap">
+    <a class="logo" href="#/" aria-label="Blitz, home">
+      <span class="lbolt" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13.4 2.2 4.4 13.4h5.6l-1.2 8.4 9-11.2h-5.6l1.2-8.4Z"/></svg></span><span aria-hidden="true">BL</span><span class="lbolt" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13.4 2.2 4.4 13.4h5.6l-1.2 8.4 9-11.2h-5.6l1.2-8.4Z"/></svg></span><span aria-hidden="true">TZ</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#/projects" data-nav="projects">Projects</a>
+      <a href="#/about" data-nav="about">About</a>
+      <a href="#/contact" data-nav="contact">Contact</a>
+    </nav>
+    <div class="gauge" id="gauge" aria-hidden="true">
+      <svg class="gb" viewBox="0 0 24 24"><path d="M13.4 2.2 4.4 13.4h5.6l-1.2 8.4 9-11.2h-5.6l1.2-8.4Z"/></svg>
+      <span class="ticks" id="gticks"></span>
+      <span class="gv" id="gv">0%</span>
+    </div>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<div id="menu" aria-hidden="true">
+  <nav class="ml" aria-label="Menu">
+    <a href="#/" style="--i:0"><span class="n">00</span>Home</a>
+    <a href="#/projects" style="--i:1"><span class="n">01</span>Projects</a>
+    <a href="#/about" style="--i:2"><span class="n">02</span>About</a>
+    <a href="#/contact" style="--i:3"><span class="n">03</span>Contact</a>
+  </nav>
+  <div class="msoc" id="msoc"></div>
+</div>
+
+<main id="app" tabindex="-1">
+  <div id="view"></div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="fw" aria-label="Blitz"><span aria-hidden="true">BL</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.4 2.2 4.4 13.4h5.6l-1.2 8.4 9-11.2h-5.6l1.2-8.4Z"/></svg><span aria-hidden="true">TZ</span></span>
+    <div class="frow">
+      <span>© <span id="yr"></span> Blitz · <span class="lbolt" style="display:inline-flex" aria-hidden="true"><svg viewBox="0 0 24 24" style="width:8px;height:11px;fill:var(--volt);stroke:none"><path d="M13.4 2.2 4.4 13.4h5.6l-1.2 8.4 9-11.2h-5.6l1.2-8.4Z"/></svg></span> On full volt throttle</span>
+      <span>Projects synced from GitHub</span>
+      <span>No cookies · No trackers</span>
+      <span class="sig">site by A. Wahab</span>
+    </div>
+  </div>
+</footer>
+
+<noscript><div style="padding:120px 24px 40px;font-family:monospace;color:#A8A8A0;max-width:640px">Blitz (A. Wahab): software developer and founder of BlitzCore, Blitz Tech and Neon Ways. Python first. This site loads my projects from GitHub with JavaScript. Everything is also at github.com/blitzlabx.</div></noscript>
+
+<script>
+'use strict';
+/* =====================================================================
+   CONFIG · the only place Blitz needs to touch by hand
+   ---------------------------------------------------------------------
+   hide  : repo names to keep off the site, e.g. ['dotfiles']
+   pin   : repo names forced to the top of SELECTED WORK
+   notes : per-repo human notes, shape:
+     'repo-name': {
+       tagline:   'one-liner shown instead of the repo description',
+       overview:  'a paragraph in your own words for the detail page',
+       highlights:['feature one','feature two'],
+       image:     'https://.../screenshot.png'
+     }
+   ===================================================================== */
+const GH_USER = 'blitzlabx';
+const CONFIG = {
+  includeForks: false,
+  hide:  [],
+  pin:   [],
+  notes: {}
+};
+const SOCIALS = [
+  { k:'telegram',  label:'Telegram',  h:'@blitzlabx', note:'DMs · fastest', url:'https://t.me/blitzlabx',            best:true },
+  { k:'x',         label:'X',         h:'@blitzlabx', note:'posts & updates', url:'https://x.com/blitzlabx' },
+  { k:'instagram', label:'Instagram', h:'@blitzlabx', note:'the visual side', url:'https://instagram.com/blitzlabx' },
+  { k:'tiktok',    label:'TikTok',    h:'@blitzlabx', note:'short form', url:'https://tiktok.com/@blitzlabx' },
+  { k:'github',    label:'GitHub',    h:'blitzlabx',  note:'the source of truth', url:'https://github.com/blitzlabx', plain:true }
+];
+
+/* ============ ICONS ============ */
+const BOLT = 'M13.4 2.2 4.4 13.4h5.6l-1.2 8.4 9-11.2h-5.6l1.2-8.4Z';
+const I = {
+  bolt:'<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="'+BOLT+'"/></svg>',
+  ne:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>',
+  ar:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>',
+  star:'<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.8 2.85 5.78 6.38.93-4.62 4.5 1.09 6.36L12 17.37l-5.7 3-1.09-6.36-4.62-4.5 6.38-.93L12 2.8Z"/></svg>',
+  clock:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>',
+  chevL:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14 6l-6 6 6 6"/></svg>',
+  github:'<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.34.95.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.66.41.35.77 1.05.77 2.12 0 1.53-.01 2.76-.01 3.14 0 .3.21.67.8.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>',
+  telegram:'<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.04 15.51l-.38 5.34c.54 0 .78-.23 1.06-.51l2.55-2.44 5.28 3.87c.97.53 1.66.25 1.92-.9L23.9 3.79c.31-1.43-.52-1.99-1.46-1.64L2.9 9.86c-1.39.54-1.37 1.32-.24 1.67l4.69 1.46L19.5 5.44c.51-.34.98-.15.6.19L9.04 15.51Z"/></svg>',
+  x:'<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.58-6.64 7.58H.46l8.6-9.83L0 1.15h7.59l5.24 6.93 6.07-6.93Zm-1.29 19.5h2.04L6.49 3.24H4.3l13.31 17.41Z"/></svg>',
+  instagram:'<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16ZM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84Zm0 10.15A4 4 0 1 1 16 12a4 4 0 0 1-4 3.99Zm6.41-11.85a1.44 1.44 0 1 0 1.43 1.44 1.44 1.44 0 0 0-1.43-1.44Z"/></svg>',
+  tiktok:'<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07Z"/></svg>'
+};
+const ICO = { telegram:I.telegram, x:I.x, instagram:I.instagram, tiktok:I.tiktok, github:I.github };
+const LANGC = { JavaScript:'#f1e05a', TypeScript:'#3178c6', Python:'#3572A5', HTML:'#e34c26', CSS:'#563d7c', Go:'#00ADD8', Rust:'#dea584', Java:'#b07219', 'C++':'#f34b7d', C:'#8a8a8a', 'C#':'#178600', Shell:'#89e051', Kotlin:'#A97BFF', Dart:'#00B4AB', PHP:'#4F5D95', Ruby:'#701516', Swift:'#F05138', Lua:'#5c7fbf', Vue:'#41b883', Svelte:'#ff3e00', Zig:'#ec915c' };
+
+/* ============ UTILS ============ */
+const $ = s => document.querySelector(s);
+const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const esc = s => String(s==null?'':s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function ago(iso){
+  const s = (Date.now() - new Date(iso).getTime()) / 1e3;
+  if (s < 90) return 'just now';
+  const m = s/60, h = m/60, d = h/24;
+  if (d < 1)  return Math.max(1,Math.floor(h)) + 'h ago';
+  if (d < 30) return Math.floor(d) + 'd ago';
+  if (d < 365) return Math.max(1,Math.floor(d/30)) + 'mo ago';
+  return Math.floor(d/365) + 'y ago';
+}
+const fmtN = n => n >= 1000 ? (n/1000).toFixed(n >= 10000 ? 0 : 1).replace(/\.0$/,'') + 'k' : String(n||0);
+const moYr = iso => new Date(iso).toLocaleString('en',{month:'short',year:'numeric'}).toUpperCase();
+const szF = kb => kb >= 1024 ? (kb/1024).toFixed(1) + ' MB' : kb + ' KB';
+const lc = l => LANGC[l] || '#6F6F69';
+const langDot = l => l ? '<span class="lg"><i style="background:'+lc(l)+'"></i>'+esc(l)+'</span>' : '';
+function meter(frac, segs){
+  segs = segs || 28;
+  const fill = Math.round(Math.max(0,Math.min(1,frac)) * segs);
+  let h = '';
+  for (let i = 0; i < segs; i++) h += '<i class="'+(i < fill ? 'f':'')+'" style="--s:'+i+'"></i>';
+  return '<span class="met" aria-hidden="true">'+h+'</span>';
+}
+
+/* ============ GITHUB DATA LAYER ============ */
+const API = 'https://api.github.com';
+const CK = 'blitz.gh.v1';
+const GH = { ready:'', error:'', user:null, repos:[], visible:[], featured:[], langs:[], recent:[], stars:0, top:'' };
+const subs = new Set();
+const notify = () => subs.forEach(f => { try { f(); } catch(e){} });
+
+function readCache(){
+  try {
+    const c = JSON.parse(sessionStorage.getItem(CK));
+    if (c && c.user && c.repos && Date.now() - c.t < 18e5) return c;
+  } catch(e){}
+  return null;
+}
+async function jget(url, sig){
+  const r = await fetch(url, { headers:{ 'Accept':'application/vnd.github+json' }, signal:sig });
+  if (!r.ok) { const e = new Error('HTTP ' + r.status); e.status = r.status; throw e; }
+  return r.json();
+}
+function derive(user, repos){
+  GH.user = user;
+  GH.repos = repos;
+  const list = repos
+    .filter(r => CONFIG.includeForks || !r.fork)
+    .filter(r => !CONFIG.hide.includes(r.name));
+  const days = r => (Date.now() - new Date(r.pushed_at)) / 864e5;
+  const score = r =>
+    (r.stargazers_count || 0) * 4 +
+    (r.homepage ? 4 : 0) + (r.description ? 2 : 0) +
+    Math.min((r.topics || []).length, 4) +
+    (days(r) < 30 ? 3 : 0) +
+    (CONFIG.pin.includes(r.name) ? 100 : 0) -
+    (r.archived ? 4 : 0);
+  GH.visible = list.slice().sort((a,b) => new Date(b.pushed_at) - new Date(a.pushed_at));
+  GH.featured = list.slice().sort((a,b) => score(b) - score(a)).slice(0, Math.min(4, list.length));
+  const cnt = {};
+  list.forEach(r => { if (r.language) cnt[r.language] = (cnt[r.language] || 0) + 1; });
+  GH.langs = Object.keys(cnt).map(k => ({ name:k, n:cnt[k] })).sort((a,b) => b.n - a.n);
+  GH.stars = list.reduce((s,r) => s + (r.stargazers_count || 0), 0);
+  GH.top = GH.langs.length ? GH.langs[0].name : '';
+  GH.recent = GH.visible.slice(0, 5);
+  GH.ready = 'ok';
+}
+function apply(u, rs){ derive(u, rs); try { sessionStorage.setItem(CK, JSON.stringify({ t:Date.now(), user:u, repos:rs })); } catch(e){} notify(); }
+let inflight = null;
+function loadGH(force){
+  if (inflight) return inflight;
+  inflight = (async () => {
+    try {
+      if (!force) { const c = readCache(); if (c) { derive(c.user, c.repos); notify(); return; } }
+      ldtext('LOADING PROFILE');
+      const ctl = new AbortController();
+      const kill = setTimeout(() => ctl.abort(), 9000);
+      const [u, rs] = await Promise.all([
+        jget(API + '/users/' + GH_USER, ctl.signal),
+        jget(API + '/users/' + GH_USER + '/repos?per_page=100&sort=updated', ctl.signal)
+      ]);
+      clearTimeout(kill);
+      ldtext('ALMOST THERE');
+      apply(u, rs);
+    } catch (e) {
+      GH.error = (e && e.status === 403) ? 'GitHub API rate limit reached. Give it a few minutes, then retry.'
+               : (e && e.name === 'AbortError') ? 'The GitHub API took too long to answer. Retry when the connection is better.'
+               : 'Could not reach the GitHub API. Check the connection and retry.';
+      GH.ready = 'error';
+      notify();
+    } finally { inflight = null; }
+  })();
+  return inflight;
+}
+const derrBox = () =>
+  '<div class="derr" data-reveal><p>' + esc(GH.error) + '</p><div class="erow">' +
+  '<button class="ext" data-retry>Retry feed</button>' +
+  '<a class="ext" href="https://github.com/' + GH_USER + '" target="_blank" rel="noopener">Open GitHub ' + I.ne + '</a></div></div>';
+const dynErr = el => { if (el) el.outerHTML = derrBox(); };
+
+/* lazy extras for the detail page */
+const extraCache = new Map();
+async function repoExtras(full){
+  if (extraCache.has(full)) return extraCache.get(full);
+  const p = (async () => {
+    const out = { langs:null, commits:null };
+    try { out.langs = await jget(API + '/repos/' + full + '/languages'); } catch(e){}
+    try {
+      const r = await fetch(API + '/repos/' + full + '/commits?per_page=1', { headers:{ 'Accept':'application/vnd.github+json' } });
+      if (r.ok) {
+        const link = r.headers.get('Link');
+        const m = link && link.match(/[?&]page=(\d+)>;\s*rel="last"/);
+        out.commits = m ? parseInt(m[1], 10) : (await r.json()).length;
+      }
+    } catch(e){}
+    return out;
+  })();
+  extraCache.set(full, p);
+  return p;
+}
+
+/* ============ SHARED COMPONENTS ============ */
+function projRow(r, i, opt){
+  opt = opt || {};
+  const N = CONFIG.notes[r.name] || {};
+  const desc = N.tagline || r.description || 'No description in the repo yet. The code is the documentation.';
+  return '<article class="proj" data-reveal>' +
+    '<span class="trace" aria-hidden="true"></span>' +
+    '<span class="pi" aria-hidden="true">' + String(i + 1).padStart(2,'0') + '</span>' +
+    '<div class="pm">' +
+      '<h3>' + esc(r.name) + (r.archived ? ' <span class="mono" style="font-size:9px;color:var(--dim)">[archived]</span>' : '') + '</h3>' +
+      '<p>' + esc(desc) + '</p>' +
+    '</div>' +
+    '<div class="pmeta">' +
+      langDot(r.language) +
+      '<span class="st">' + I.star + ' ' + fmtN(r.stargazers_count) + '</span>' +
+      '<span>' + I.clock + ' ' + ago(r.pushed_at) + '</span>' +
+      '<a class="ext" href="' + esc(r.html_url) + '" target="_blank" rel="noopener" aria-label="Open ' + esc(r.name) + ' on GitHub">Repo ' + I.ne + '</a>' +
+      (r.homepage ? '<a class="ext" href="' + esc(r.homepage) + '" target="_blank" rel="noopener" aria-label="Open live demo of ' + esc(r.name) + '">Live ' + I.ne + '</a>' : '') +
+    '</div>' +
+    '<a class="stretch" href="#/projects/' + encodeURIComponent(r.name) + '" aria-label="Open detail page for ' + esc(r.name) + '"></a>' +
+  '</article>';
+}
+function wordmark(cls){
+  return '<span class="' + cls + '" aria-label="Blitz">' +
+    '<span aria-hidden="true">BL</span><span class="lbolt" aria-hidden="true">' + I.bolt + '</span><span aria-hidden="true">TZ</span></span>';
+}
+
+/* ============ PAGES ============ */
+const STACK=[['Python','python'],['JavaScript','javascript'],['TypeScript','typescript'],['React','react'],['Next.js','nextjs','inv'],['Angular','angular'],['SolidJS','solidjs'],['Svelte','svelte'],['C#','csharp'],['Rust','rust','inv'],['Go','go'],['Dart','dart'],['Kotlin','kotlin'],['Ruby','ruby']];
+const dv=n=>'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/'+n+'/'+n+'-original.svg';
+function stackHTML(){
+  return '<div class="stk"><div class="stk-main" data-reveal><span class="stk-tag">' + I.bolt + ' Main language</span>' +
+    '<img src="' + dv('python') + '" width="64" height="64" alt="Python logo" onerror="this.remove()"><h3>Python</h3>' +
+    '<p>My favorite and first pick. Everything else gets chosen for the job.</p></div>' +
+    '<div class="stk-grid" data-stagger>' + STACK.slice(1).map(s =>
+      '<div class="stk-i" data-reveal><img class="' + (s[2] || '') + '" src="' + dv(s[1]) + '" width="30" height="30" alt="" onerror="this.remove()"><span>' + s[0] + '</span></div>').join('') +
+      '<div class="stk-i" data-reveal><span class="more">' + I.bolt + '</span><span>and more</span></div></div></div>';
+}
+function heroSubHTML(){
+  return 'Software developer and founder building digital products, websites, apps and tools. Python first. CEO of <a href="#blitzcore-sec" data-sc>BlitzCore</a>, Blitz Tech and Neon Ways.';
+}
+function pgHome(){
+  return '' +
+  '<section class="hero">' +
+    '<canvas id="arc" aria-hidden="true"></canvas>' +
+    '<div class="wrap">' +
+        '<p class="role-row" data-reveal><svg class="rb" viewBox="0 0 24 24" aria-hidden="true"><path d="' + BOLT + '"/></svg> <b>A. Wahab</b> <span aria-hidden="true">/</span> <span id="rot">Software developer</span></p>' +
+      '<h1 class="hw" id="hw">' +
+        '<span class="lm" aria-hidden="true"><span class="l">B</span></span>' +
+        '<span class="lm" aria-hidden="true"><span class="l">L</span></span>' +
+        '<span class="lm" aria-hidden="true"><span class="l lbolt">' + I.bolt + '</span></span>' +
+        '<span class="lm" aria-hidden="true"><span class="l">T</span></span>' +
+        '<span class="lm" aria-hidden="true"><span class="l">Z</span></span>' +
+        '<span class="sr">Blitz, A. Wahab, software developer and founder</span>' +
+      '</h1>' +
+      '<div data-reveal style="--i:1"><span class="tagchip">' + I.bolt + ' On full volt throttle</span></div>' +
+      '<p class="hsub" data-reveal style="--i:2" id="hsub">' + heroSubHTML() + '</p>' +
+      '<div class="hcta" data-reveal style="--i:3">' +
+        '<a class="btn pri" href="#/projects">View projects ' + I.ar + '</a>' +
+        '<a class="btn" href="https://github.com/' + GH_USER + '" target="_blank" rel="noopener">GitHub ' + I.ne + '</a>' +
+        '<a class="btn" href="#/contact">Contact</a>' +
+      '</div>' +
+      '<div class="hstats" data-reveal style="--i:4">' +
+        '<div class="hs"><span class="k">' + I.github + ' Repos</span><span class="v" id="stR">0</span></div>' +
+        '<div class="hs"><span class="k">' + I.star + ' Stars</span><span class="v" id="stS">0</span></div>' +
+        '<div class="hs"><span class="k">' + I.bolt + ' Language</span><span class="v">Python</span></div>' +
+      '</div>' +
+    '</div>' +
+  '</section>' +
+  '<div class="marq" data-marq aria-hidden="true"></div>' +
+
+  '<section class="sec"><div class="wrap">' +
+    '<div class="shead" data-reveal><span class="n">01</span><h2>About</h2><span class="src">operator notes</span></div>' +
+    '<div class="agrid">' +
+      '<div data-reveal>' +
+        '<p class="lead">I&rsquo;m Blitz, a software developer and founder building digital products, websites, apps, tools and software systems.</p>' +
+        '<p>Python is my main language, with plenty of JavaScript/TypeScript, Rust, Go, C# and more alongside it. I&rsquo;m the CEO and founder of BlitzCore, Blitz Tech and Neon Ways. I build. I experiment. I ship. <span class="inb">' + I.bolt + '</span></p>' +
+        '<a class="tlink" href="#/about">More about me ' + I.ar + '</a>' +
+      '</div>' +
+      '<div data-reveal style="--i:1">' +
+        '<figure class="fig afig">' +
+          '<img src="https://github.com/' + GH_USER + '.png" width="320" height="320" alt="Blitz profile photo from GitHub" loading="lazy">' +
+          '<figcaption><span>Fig. 01</span><span>the operator</span></figcaption>' +
+        '</figure>' +
+        '<dl class="facts">' +
+          '<div><dt>Role</dt><dd>Developer / Founder</dd></div>' +
+          '<div><dt>Name</dt><dd>A. Wahab</dd></div>' +
+          '<div><dt>Handle</dt><dd>' + GH_USER + '</dd></div>' +
+          '<div><dt>Main</dt><dd>Python</dd></div>' +
+        '</dl>' +
+      '</div>' +
+    '</div>' +
+  '</div></section>' +
+
+  '<section class="sec"><div class="wrap">' +
+    '<div class="shead" data-reveal><span class="n">02</span><h2>Stack</h2><span class="src">python first</span></div>' +
+    stackHTML() +
+  '</div></section>' +
+
+  '<section class="sec"><div class="wrap">' +
+    '<div class="shead" data-reveal><span class="n">03</span><h2>Selected work</h2><span class="src" id="fw-src">top picks by signal</span></div>' +
+    '<div id="dyn-feat">' + (GH.ready === 'ok' ? '' : '<div class="dstat"><span class="dotp"></span> ranking repositories</div>') + '</div>' +
+  '</div></section>' +
+
+  '<section class="sec"><div class="wrap">' +
+    '<div class="shead" data-reveal><span class="n">04</span><h2>Language load</h2><span class="src">counted by repository</span></div>' +
+    '<div id="dyn-langs">' + (GH.ready === 'ok' ? '' : '<div class="dstat"><span class="dotp"></span> aggregating languages</div>') + '</div>' +
+    '<p class="lnote" data-reveal>Aggregated from every public, non-forked repo. Click a language to filter the project index.</p>' +
+  '</div></section>' +
+
+  '<section class="sec"><div class="wrap">' +
+    '<div class="shead" data-reveal><span class="n">05</span><h2>GitHub</h2><span class="src">github.com/' + GH_USER + '</span></div>' +
+    '<div class="ggrid">' +
+      '<div id="dyn-gcard">' + (GH.ready === 'ok' ? '' : '<div class="dstat"><span class="dotp"></span> reading profile</div>') + '</div>' +
+      '<div class="rlist" id="dyn-recent">' + (GH.ready === 'ok' ? '' : '<div class="dstat"><span class="dotp"></span> reading push log</div>') + '</div>' +
+    '</div>' +
+  '</div></section>' +
+
+  '<section class="sec" id="blitzcore-sec"><div class="wrap">' +
+    '<div class="shead" data-reveal><span class="n">06</span><h2>Ventures</h2><span class="src">founder</span></div>' +
+    '<div class="bc" data-reveal>' +
+      '<span class="bcbolt" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="' + BOLT + '"/></svg></span>' +
+      '<span class="k">Founded and led by Blitz</span>' +
+      '<h3>BLITZCORE</h3>' +
+        '<p>I&rsquo;m the founder and CEO of BlitzCore, Blitz Tech and Neon Ways. Software, product development, design and a steady stream of experiments with new technology.</p>' +
+        '<div class="vgrid"><div class="vc">' + I.bolt + '<span>BlitzCore</span></div><div class="vc">' + I.bolt + '<span>Blitz Tech</span></div><div class="vc">' + I.bolt + '<span>Neon Ways</span></div></div>' +
+      '<div class="bcrepos" id="dyn-bc"></div>' +
+    '</div>' +
+  '</div></section>' +
+
+  '<section class="sec"><div class="wrap">' +
+    '<div class="shead" data-reveal><span class="n">07</span><h2>Contact</h2><span class="src">say hi</span></div>' +
+    '<div class="cstrip" data-reveal>' +
+      '<div class="cl"><h2>Let&rsquo;s build something.</h2><p>Telegram is the fastest; GitHub if it is about the code.</p></div>' +
+      '<div class="cbtns">' +
+        '<a class="ibtn" href="https://t.me/' + GH_USER + '" target="_blank" rel="noopener" aria-label="Telegram">' + I.telegram + '</a>' +
+        '<a class="ibtn" href="https://x.com/' + GH_USER + '" target="_blank" rel="noopener" aria-label="X">' + I.x + '</a>' +
+        '<a class="ibtn" href="https://instagram.com/' + GH_USER + '" target="_blank" rel="noopener" aria-label="Instagram">' + I.instagram + '</a>' +
+        '<a class="ibtn" href="https://tiktok.com/@' + GH_USER + '" target="_blank" rel="noopener" aria-label="TikTok">' + I.tiktok + '</a>' +
+        '<a class="ibtn" href="https://github.com/' + GH_USER + '" target="_blank" rel="noopener" aria-label="GitHub">' + I.github + '</a>' +
+      '</div>' +
+    '</div>' +
+  '</div></section>';
+}
+function hydrateHome(){
+  if (GH.ready === 'error') {
+    ['dyn-feat','dyn-langs','dyn-gcard','dyn-recent'].forEach(id => dynErr(document.getElementById(id)));
+    const dot = $('#livedot'); if (dot) dot.classList.add('off');
+    const lp = $('#lp'); if (lp) lp.textContent = 'offline';
+    const ff = $('#ffeed'); if (ff) ff.textContent = 'offline';
+    return;
+  }
+  if (GH.ready !== 'ok') return;
+  const feat = $('#dyn-feat');
+  if (feat) feat.innerHTML = '<div class="plist feat" data-stagger>' + GH.featured.map((r,i) => projRow(r,i)).join('') + '</div>' || '';
+  if (feat && !GH.featured.length) feat.innerHTML = '<p class="empty">No public, non-forked repositories visible right now.</p>';
+  const src = $('#fw-src'); if (src) src.textContent = 'top ' + GH.featured.length + ' of ' + GH.visible.length + ' public';
+  const langs = $('#dyn-langs');
+  if (langs) {
+    const tot = GH.langs.reduce((s,l) => s + l.n, 0) || 1;
+    langs.innerHTML = '<div data-stagger>' + GH.langs.slice(0,8).map(l =>
+      '<button class="lrow" data-lang="' + esc(l.name) + '" data-reveal aria-label="Filter projects by ' + esc(l.name) + '">' +
+        '<span class="ln">' + esc(l.name) + '</span>' +
+        meter(l.n / (GH.langs[0].n || 1)) +
+        '<span class="lc">' + l.n + ' repo' + (l.n > 1 ? 's' : '') + ' · ' + Math.round(l.n/tot*100) + '%</span>' +
+      '</button>').join('') + '</div>';
+    bindLangRows();
+  }
+  const u = GH.user;
+  const gc = $('#dyn-gcard');
+  if (gc) gc.innerHTML =
+    '<div class="gcard" data-reveal>' +
+      '<div class="top"><img src="' + esc(u.avatar_url) + '" width="76" height="76" alt="GitHub avatar of ' + esc(u.name || GH_USER) + '" loading="lazy">' +
+      '<div><div class="gh-name">' + esc(u.name || 'Blitz') + '</div><div class="gh-handle">@' + GH_USER + '</div></div></div>' +
+      (u.bio ? '<p class="bio">' + esc(u.bio) + '</p>' : '') +
+      '<dl class="gspec">' +
+        '<div><dt>Public repos</dt><dd>' + u.public_repos + '</dd></div>' +
+        '<div><dt>Stars across repos</dt><dd>' + fmtN(GH.stars) + '</dd></div>' +
+        (GH.top ? '<div><dt>Top language</dt><dd>' + esc(GH.top) + '</dd></div>' : '') +
+        '<div><dt>On GitHub since</dt><dd>' + moYr(u.created_at) + '</dd></div>' +
+      '</dl>' +
+      '<a class="btn" href="https://github.com/' + GH_USER + '" target="_blank" rel="noopener">Open profile ' + I.ne + '</a>' +
+    '</div>';
+  const rc = $('#dyn-recent');
+  if (rc) rc.innerHTML = '<span class="rk" data-reveal>Recently pushed</span><div data-stagger>' +
+    GH.recent.map(r =>
+      '<a class="ritem" href="#/projects/' + encodeURIComponent(r.name) + '" data-reveal>' +
+        '<span class="rn">' + esc(r.name) + '</span>' + langDot(r.language) +
+        '<span class="rt">' + ago(r.pushed_at) + '</span>' +
+      '</a>').join('') + '</div>';
+  const bc = $('#dyn-bc');
+  if (bc) {
+    const hits = GH.visible.filter(r => /blitzcore/i.test(r.name)).slice(0,4);
+    bc.innerHTML = hits.length ? '<span class="rk">Repos under the banner</span>' +
+      hits.map(r => '<a href="#/projects/' + encodeURIComponent(r.name) + '">' + esc(r.name) + ' ' + I.ne + '</a>').join('') : '';
+  }
+  const lp = $('#lp'); if (lp && GH.visible[0]) lp.textContent = ago(GH.visible[0].pushed_at);
+  const ff = $('#ffeed'); if (ff) ff.textContent = 'live';
+  const rE = $('#stR'), sE = $('#stS'), lE = $('#stL');
+  if (rE) { rE.dataset.to = GH.user.public_repos; countUp(rE); }
+  if (sE) { sE.dataset.to = GH.stars; countUp(sE); }
+  if (lE) lE.textContent = GH.top || 'n/a';
+}
+function countUp(el){
+  const to = parseInt(el.dataset.to || '0', 10);
+  if (RM) { el.textContent = fmtN(to); return; }
+  const t0 = performance.now(), dur = 800;
+  (function f(t){
+    const p = Math.min(1, (t - t0) / dur);
+    el.textContent = fmtN(Math.round(to * (1 - Math.pow(1 - p, 3))));
+    if (p < 1) requestAnimationFrame(f);
+  })(t0);
+}
+function bindLangRows(){
+  document.querySelectorAll('.lrow[data-lang]').forEach(b => {
+    b.addEventListener('click', () => { location.hash = '#/projects?f=' + encodeURIComponent(b.dataset.lang); });
+  });
+}
+/* ---- projects index ---- */
+let fLang = 'ALL', fq = '', fsrt = 'pushed';
+function pgProjects(){
+  return '<div class="phead"><div class="wrap">' +
+    '<a class="crumb" href="#/">' + I.chevL + ' Home</a>' +
+    '<h1 data-reveal>Project index</h1>' +
+    '<p class="sub" data-reveal style="--i:1">Every public, non-forked repository on <a href="https://github.com/' + GH_USER + '" target="_blank" rel="noopener">github.com/' + GH_USER + '</a>, filterable and sortable. The numbers are live, not typed in.</p>' +
+    '<div id="dyn-pidx" style="margin-top:8px">' + (GH.ready === 'ok' ? pidxBody() : '<div class="dstat"><span class="dotp"></span> reading repository list</div>') + '</div>' +
+  '</div></div>';
+}
+function pidxBody(){
+  if (GH.ready === 'error') return derrBox();
+  const chips = ['ALL'].concat(GH.langs.slice(0,6).map(l => l.name));
+  return '<div class="fbar">' +
+    '<div class="chips" role="group" aria-label="Filter by language">' +
+      chips.map(c => '<button class="chip' + (c === fLang ? ' on' : '') + '" data-chip="' + esc(c) + '" aria-pressed="' + (c === fLang) + '">' + esc(c) + '</button>').join('') +
+    '</div>' +
+    '<div class="fsort">' +
+      '<input id="pq" type="search" placeholder="type to filter" value="' + esc(fq) + '" aria-label="Filter projects by text">' +
+      '<select id="psrt" aria-label="Sort projects">' +
+        '<option value="pushed"' + (fsrt==='pushed'?' selected':'') + '>Recently pushed</option>' +
+        '<option value="stars"' + (fsrt==='stars'?' selected':'') + '>Most stars</option>' +
+        '<option value="created"' + (fsrt==='created'?' selected':'') + '>Newest repo</option>' +
+        '<option value="name"' + (fsrt==='name'?' selected':'') + '>Name</option>' +
+      '</select>' +
+    '</div>' +
+  '</div><p class="cnt" id="pcnt"></p><div id="plist" class="plist"></div>';
+}
+function applyPidx(){
+  const list = $('#plist'); if (!list) return;
+  let rows = GH.visible;
+  if (fLang !== 'ALL') rows = rows.filter(r => r.language === fLang);
+  if (fq) { const q = fq.toLowerCase(); rows = rows.filter(r => (r.name + ' ' + (r.description || '')).toLowerCase().includes(q)); }
+  const s = { pushed:(a,b) => new Date(b.pushed_at) - new Date(a.pushed_at),
+              stars:(a,b) => b.stargazers_count - a.stargazers_count,
+              created:(a,b) => new Date(b.created_at) - new Date(a.created_at),
+              name:(a,b) => a.name.localeCompare(b.name) }[fsrt];
+  rows = rows.slice().sort(s);
+  const cnt = $('#pcnt');
+  if (cnt) cnt.textContent = 'showing ' + rows.length + ' / ' + GH.visible.length + ' public repos';
+  if (!rows.length) { list.innerHTML = '<p class="empty">Nothing matches that. The feed is live; check back after the next push.</p>'; return; }
+  list.innerHTML = rows.map((r,i) => projRow(r,i)).join('');
+  watchReveals(list);
+}
+function afProjects(root){
+  const q = root.querySelector('#pq'), srt = root.querySelector('#psrt');
+  root.querySelectorAll('[data-chip]').forEach(c => c.addEventListener('click', () => {
+    fLang = c.dataset.chip;
+    root.querySelectorAll('[data-chip]').forEach(x => { const on = x.dataset.chip === fLang; x.classList.toggle('on', on); x.setAttribute('aria-pressed', on); });
+    applyPidx();
+  }));
+  if (q) q.addEventListener('input', () => { fq = q.value.trim(); applyPidx(); });
+  if (srt) srt.addEventListener('click', () => {});
+  if (srt) srt.addEventListener('change', () => { fsrt = srt.value; applyPidx(); });
+  if (GH.ready === 'ok') applyPidx();
+}
+/* ---- project detail ---- */
+function pgDetail(arg){
+  return '<div class="phead"><div class="wrap" id="dyn-detail">' +
+    '<a class="crumb" href="#/projects">' + I.chevL + ' Project index</a>' +
+    '<div class="dstat" style="padding:30px 0"><span class="dotp"></span> reading repo</div>' +
+  '</div></div>';
+}
+function detailHTML(r){
+  const N = CONFIG.notes[r.name] || {};
+  const idx = GH.visible.findIndex(x => x.name === r.name);
+  const prev = GH.visible[idx - 1], next = GH.visible[idx + 1];
+  return '' +
+    '<a class="crumb" href="#/projects">' + I.chevL + ' Project index</a>' +
+    '<h1 data-reveal>' + esc(r.name) + '</h1>' +
+    '<div class="dmeta" data-reveal style="--i:1">' +
+      (r.language ? '<span class="lg"><i style="background:' + lc(r.language) + '"></i>' + esc(r.language) + '</span>' : '') +
+      '<span class="st">' + I.star + ' ' + fmtN(r.stargazers_count) + ' stars</span>' +
+      '<span>' + ago(r.pushed_at) + '</span>' +
+      (r.archived ? '<span>[archived]</span>' : '') +
+    '</div>' +
+    '<div class="dcta" data-reveal style="--i:2">' +
+      '<a class="btn" href="' + esc(r.html_url) + '" target="_blank" rel="noopener">Repository ' + I.ne + '</a>' +
+      (r.homepage ? '<a class="btn pri" href="' + esc(r.homepage) + '" target="_blank" rel="noopener">Live demo ' + I.ne + '</a>' : '') +
+    '</div>' +
+    '<div class="dbody">' +
+      '<div>' +
+        (N.image ? '<div class="dshot" data-reveal><img src="' + esc(N.image) + '" alt="Screenshot of ' + esc(r.name) + '" loading="lazy"></div>' : '') +
+        '<h4 data-reveal>Overview</h4>' +
+        '<p class="ov" data-reveal>' + esc(N.overview || r.description || 'No description written in the repo yet. The README there is the source of truth.') + '</p>' +
+        (N.highlights && N.highlights.length ? '<h4 data-reveal style="margin-top:34px">What it does</h4><ul class="hl" data-stagger>' +
+          N.highlights.map(h => '<li data-reveal>' + esc(h) + '</li>').join('') + '</ul>' : '') +
+        '<h4 data-reveal style="margin-top:34px">Spec sheet</h4>' +
+        '<div class="spec" data-reveal>' +
+          '<div><span class="sk">Created</span><span class="sv">' + moYr(r.created_at) + '</span></div>' +
+          '<div><span class="sk">Last push</span><span class="sv">' + ago(r.pushed_at) + '</span></div>' +
+          '<div><span class="sk">Commits</span><span class="sv" id="dc">reading&hellip;</span></div>' +
+          '<div><span class="sk">Primary lang</span><span class="sv">' + esc(r.language || 'n/a') + '</span></div>' +
+          '<div><span class="sk">Default branch</span><span class="sv">' + esc(r.default_branch || 'main') + '</span></div>' +
+          '<div><span class="sk">Open issues</span><span class="sv">' + (r.open_issues_count || 0) + '</span></div>' +
+          '<div><span class="sk">Forks</span><span class="sv">' + fmtN(r.forks_count) + '</span></div>' +
+          '<div><span class="sk">Size</span><span class="sv">' + szF(r.size || 0) + '</span></div>' +
+          '<div><span class="sk">License</span><span class="sv">' + esc(r.license && r.license.spdx_id !== 'NOASSERTION' ? r.license.spdx_id : 'none') + '</span></div>' +
+        '</div>' +
+      '</div>' +
+      '<div>' +
+        '<h4 data-reveal>Language split</h4><div id="dl" data-reveal><span class="mono" style="color:var(--dim)">reading bytes&hellip;</span></div>' +
+        ((r.topics && r.topics.length) ? '<h4 data-reveal style="margin-top:34px">Topics</h4><div class="topi" data-stagger>' +
+          r.topics.slice(0,10).map(t => '<span data-reveal>' + esc(t) + '</span>').join('') + '</div>' : '') +
+      '</div>' +
+    '</div>' +
+    ((prev || next) ? '<nav class="pn" aria-label="More projects">' +
+      (prev ? '<a href="#/projects/' + encodeURIComponent(prev.name) + '"><span class="k">Previous</span><strong>' + esc(prev.name) + '</strong></a>' : '<span></span>') +
+      (next ? '<a href="#/projects/' + encodeURIComponent(next.name) + '"><span class="k">Next</span><strong>' + esc(next.name) + '</strong></a>' : '<span></span>') +
+    '</nav>' : '');
+}
+async function afDetail(root, arg){
+  if (GH.ready !== 'ok' || !arg) return;
+  const r = GH.visible.find(x => x.name === arg);
+  const box = root.querySelector('#dyn-detail');
+  if (!r) {
+    document.title = 'Blitz · Repo not found';
+    if (box) box.innerHTML = '<h1 data-reveal>Not in the feed</h1>' +
+      '<p class="sub" data-reveal style="--i:1;margin-bottom:26px">There is no public, non-forked repo named <b>' + esc(arg) + '</b> right now. It may be renamed, private, or excluded here on purpose.</p>' +
+      '<div class="erow" data-reveal style="--i:2"><a class="ext" href="https://github.com/' + GH_USER + '?tab=repositories" target="_blank" rel="noopener">Browse all repos ' + I.ne + '</a><a class="ext" href="#/projects">Back to index ' + I.ar + '</a></div>';
+    watchReveals(root); return;
+  }
+  document.title = 'Blitz · ' + r.name;
+  if (box) box.innerHTML = detailHTML(r);
+  watchReveals(root); staggers(root);
+  const ex = await repoExtras(r.full_name);
+  const dl = root.querySelector('#dl'), dc = root.querySelector('#dc');
+  if (dl && ex.langs) {
+    const keys = Object.keys(ex.langs), tot = keys.reduce((s,k) => s + ex.langs[k], 0) || 1;
+    dl.innerHTML = keys.length ? '<div data-stagger>' + keys.map(k =>
+      '<div class="lrow" style="grid-template-columns:minmax(90px,130px) 1fr auto;cursor:default" data-reveal>' +
+        '<span class="ln">' + esc(k) + '</span>' + meter(ex.langs[k]/tot, 30) +
+        '<span class="lc">' + Math.round(ex.langs[k]/tot*100) + '%</span></div>').join('') + '</div>'
+      : '<span class="mono" style="color:var(--dim)">no language data yet</span>';
+    watchReveals(dl);
+  } else if (dl) dl.innerHTML = '<span class="mono" style="color:var(--dim)">language data unavailable right now</span>';
+  if (dc && ex.commits != null) dc.textContent = '~' + fmtN(ex.commits);
+  else if (dc) dc.textContent = 'n/a';
+}
+/* ---- about ---- */
+function pgAbout(){
+  return '<div class="phead"><div class="wrap">' +
+    '<a class="crumb" href="#/">' + I.chevL + ' Home</a>' +
+    '<h1 data-reveal>About</h1>' +
+    '<p class="sub" data-reveal style="--i:1">Blitz (A. Wahab). Software developer and founder. Find my work at <a href="https://github.com/' + GH_USER + '" target="_blank" rel="noopener">github.com/' + GH_USER + '</a>.</p>' +
+  '</div></div>' +
+  '<section class="sec" style="padding-top:clamp(40px,5vw,70px)"><div class="wrap ab-grid">' +
+    '<div data-stagger>' +
+        '<p class="lead" data-reveal>I&rsquo;m Blitz, a software developer and founder building digital products, websites, apps, tools and software systems.</p>' +
+        '<p data-reveal>I mainly work with Python and also build across JavaScript/TypeScript, React, Next.js, Angular, SolidJS, Svelte, C#, Rust, Go, Dart, Kotlin, Ruby and more.</p>' +
+        '<p data-reveal>I&rsquo;m the CEO and founder of BlitzCore, Blitz Tech and Neon Ways, with a focus on software, product development, design, and experimenting with new technologies.</p>' +
+        '<p data-reveal>I build. I experiment. I ship. <span class="inb">' + I.bolt + '</span></p>' +
+    '</div>' +
+    '<div data-reveal style="--i:1">' +
+      '<figure class="fig afig">' +
+        '<img src="https://github.com/' + GH_USER + '.png" width="320" height="320" alt="Blitz profile photo from GitHub" loading="lazy">' +
+        '<figcaption><span>Fig. 01</span><span>the operator</span></figcaption>' +
+      '</figure>' +
+      '<dl class="facts">' +
+        '<div><dt>Role</dt><dd>Developer / Founder</dd></div>' +
+        '<div><dt>Name</dt><dd>A. Wahab</dd></div>' +
+        '<div><dt>Handle</dt><dd>' + GH_USER + '</dd></div>' +
+        '<div><dt>Wire</dt><dd><a href="https://t.me/' + GH_USER + '" target="_blank" rel="noopener" style="color:var(--volt)">Telegram</a></dd></div>' +
+      '</dl>' +
+    '</div>' +
+  '</div></section>' +
+  '<section class="sec" style="padding-top:0"><div class="wrap pstack">' +
+    '<h4 data-reveal>Operating principles</h4>' +
+    '<ol class="prin" data-stagger>' +
+      '<li data-reveal>If it is not pushed, it is not finished.</li>' +
+      '<li data-reveal>Public by default. The repo is the resume.</li>' +
+      '<li data-reveal>Small ships, shipped often, beat big plans.</li>' +
+    '</ol>' +
+    '<a class="tlink" href="#/contact" data-reveal>Reach me ' + I.ar + '</a>' +
+  '</div></section>';
+}
+/* ---- contact ---- */
+function pgContact(){
+  return '<div class="phead"><div class="wrap">' +
+    '<a class="crumb" href="#/">' + I.chevL + ' Home</a>' +
+    '<h1 data-reveal>Contact</h1>' +
+    '<p class="sub" data-reveal style="--i:1">Telegram is the fastest; GitHub if it is about the code. One handle everywhere: <b style="color:var(--txt)">' + GH_USER + '</b>.</p>' +
+    '<div class="clist" data-stagger>' +
+      SOCIALS.map(s =>
+        '<a class="crow" href="' + s.url + '" target="_blank" rel="noopener" data-reveal>' +
+          '<svg class="pi-ic" viewBox="0 0 24 24" aria-hidden="true">' + ICO[s.k].match(/<svg[^>]*>([\s\S]*?)<\/svg>/)[1] + '</svg>' +
+          '<span class="cn">' + s.label + (s.best ? '<span class="best">fastest</span>' : '') + '</span>' +
+          '<span class="ch' + (s.best ? ' m' : '') + '">' + esc(s.h) + '</span>' +
+          '<span class="cd">' + esc(s.note) + '</span>' +
+          '<span class="ar">' + I.ne + '</span>' +
+        '</a>').join('') +
+    '</div>' +
+  '</div></div>';
+}
+function pg404(){
+  return '<div class="phead"><div class="wrap nfbox">' +
+    '<span class="mono" style="color:var(--volt)">404</span>' +
+    '<h1 data-reveal>Route not wired</h1>' +
+    '<p data-reveal style="--i:1">There is no page at this address. The feed is fine; the route is not.</p>' +
+    '<a class="btn pri" href="#/" data-reveal style="--i:2">Back home ' + I.ar + '</a>' +
+  '</div></div>';
+}
+
+const PAGES = {
+  home:     { live:true, title:'Blitz (A. Wahab) · Python developer & founder of BlitzCore', html:pgHome,     after:afHomeWrap },
+  projects: { live:true, title:'Blitz · Project index',         html:pgProjects, after:afProjects },
+  detail:   { live:true, title:'Blitz · Project',               html:pgDetail,   after:afDetailArg },
+  about:    { title:'Blitz · About',    html:pgAbout },
+  contact:  { title:'Blitz · Contact',  html:pgContact },
+  nf:       { title:'Blitz · Route not wired', html:pg404 }
+};
+function afHomeWrap(root){ hydrateHome(); watchReveals(root); }
+function afDetailArg(root, r){ afDetail(root, r.arg); }
+
+/* ============ ROUTER ============ */
+let cleanups = [];
+function parseRoute(){
+  const h = location.hash;
+  if (!h || h === '#' || h.indexOf('#/') !== 0) return { key:'home' };
+  const raw = h.slice(2);
+  const [path, qs] = raw.split('?');
+  const seg = path.split('/').filter(Boolean);
+  const q = {};
+  if (qs) new URLSearchParams(qs).forEach((v,k) => q[k] = v);
+  if (seg[0] === 'projects') return seg[1] ? { key:'detail', arg:decodeURIComponent(seg[1]) } : { key:'projects', q };
+  if (seg[0] === 'about' || seg[0] === 'contact') return { key:seg[0] };
+  if (!seg[0]) return { key:'home' };
+  return { key:'nf' };
+}
+let firstRoute = true;
+function render(silent){
+  cleanups.forEach(f => { try { f(); } catch(e){} });
+  cleanups = [];
+  subs.clear();
+  closeMenu();
+  const r = parseRoute();
+  const P = PAGES[r.key];
+  const view = $('#view');
+  document.title = P.title;
+  setDesc(r);
+  setActiveNav(r.key);
+  const paint = () => {
+    view.innerHTML = P.html(r);
+    const se = document.documentElement.style;
+    se.scrollBehavior = 'auto'; window.scrollTo(0,0); se.scrollBehavior = '';
+    staggers(view); watchReveals(view);
+    bindScrollAnchors(view);
+    view.classList.remove('out');
+    if (P.after) P.after(view, r);
+    if (r.key === 'home') { initMarquee(view); initHeroFX(view); $('#app').focus({ preventScroll:true }); }
+    if (GH.ready === 'ok') applyPidxIfLive(r.key);
+    if (GH.ready === '') subs.add(() => { if (parseRoute().key === r.key) render(true); });
+  };
+  if (P.live && GH.ready === '') { view.innerHTML = '<div class="phead"><div class="wrap"><div class="dstat"><span class="dotp"></span> connecting to the feed</div></div></div>'; return; }
+  if (firstRoute || silent || RM) { firstRoute = false; paint(); }
+  else {
+    view.classList.add('out');
+    setTimeout(paint, 190);
+  }
+}
+function setDesc(r){
+  const m = document.querySelector('meta[name="description"]');
+  const map = { home:'Blitz (A. Wahab) is a software developer and founder building websites, apps, tools and software systems. Python first. CEO of BlitzCore, Blitz Tech and Neon Ways.',
+    projects:'Every public repository from github.com/' + GH_USER + ', live.', about:'Who Blitz is and how this live portfolio works.',
+    contact:'Reach Blitz on Telegram, X, Instagram, TikTok or GitHub.' };
+  if (m && map[r.key]) m.content = map[r.key];
+}
+function setActiveNav(key){
+  const map = { projects:'projects', detail:'projects', about:'about', contact:'contact' };
+  document.querySelectorAll('.nav a').forEach(a => a.classList.toggle('on', a.dataset.nav === map[key]));
+}
+function applyPidxIfLive(key){ if (key === 'projects' && $('#plist')) applyPidx(); }
+function bindScrollAnchors(view){
+  view.querySelectorAll('a[data-sc]').forEach(a => a.addEventListener('click', e => {
+    const t = document.getElementById(a.getAttribute('href').slice(1));
+    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: RM ? 'auto' : 'smooth' }); }
+  }));
+}
+
+/* ============ REVEAL / STAGGER ============ */
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+}), { threshold:.1, rootMargin:'0px 0px -36px' });
+function watchReveals(root){ root.querySelectorAll('[data-reveal]:not(.in)').forEach(el => io.observe(el)); }
+function staggers(root){ root.querySelectorAll('[data-stagger]').forEach(p => [...p.children].forEach((c,i) => c.style.setProperty('--i', i))); }
+
+/* ============ MARQUEE ============ */
+function initMarquee(view){
+  const m = view.querySelector('[data-marq]'); if (!m) return;
+  const half = '<span class="mhalf">' + Array.from({length:6}, () =>
+    '<span class="mi">' + I.bolt + '<span>On full volt throttle</span></span>').join('') + '</span>';
+  m.innerHTML = '<div class="mtrack">' + half + half + '</div>';
+}
+
+/* ============ HERO FX (canvas arcs) ============ */
+function initHeroFX(view){
+  if (RM) return;
+  const cv = view.querySelector('#arc'), hero = view.querySelector('.hero');
+  if (!cv || !hero) return;
+  const ctx = cv.getContext('2d');
+  let W = 0, H = 0, on = true, arcs = [], raf = 0, lastMove = 0;
+  const resize = () => {
+    const dpr = Math.min(devicePixelRatio || 1, 2);
+    W = hero.clientWidth; H = hero.clientHeight;
+    cv.width = W * dpr; cv.height = H * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  };
+  resize();
+  window.addEventListener('resize', resize);
+  const vio = new IntersectionObserver(es => { on = es[0].isIntersecting; if (on) schedule(); });
+  vio.observe(hero);
+  function spawn(x, y, len, ang){
+    const segs = 6 + (Math.random() * 4 | 0), pts = [[x, y]];
+    let a = ang;
+    for (let i = 0; i < segs; i++) {
+      a += (Math.random() - .5) * .95;
+      const st = len / segs;
+      x += Math.cos(a) * st; y += Math.sin(a) * st;
+      pts.push([x, y]);
+    }
+    arcs.push({ pts, t:0, life:.3 + Math.random() * .18 });
+    if (!raf) raf = requestAnimationFrame(tick);
+  }
+  function tick(){
+    ctx.clearRect(0, 0, W, H);
+    arcs = arcs.filter(a => a.t < a.life);
+    arcs.forEach(a => {
+      a.t += .016;
+      const al = Math.max(0, 1 - a.t / a.life);
+      ctx.lineJoin = 'round';
+      ctx.beginPath();
+      a.pts.forEach((p, i) => i ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1]));
+      ctx.strokeStyle = 'rgba(245,224,3,' + (.16 * al).toFixed(3) + ')';
+      ctx.lineWidth = 2.6; ctx.stroke();
+      ctx.strokeStyle = 'rgba(245,224,3,' + (.92 * al).toFixed(3) + ')';
+      ctx.lineWidth = 1; ctx.stroke();
+    });
+    raf = arcs.length ? requestAnimationFrame(tick) : 0;
+  }
+  let idle = 0;
+  function schedule(){
+    clearTimeout(idle);
+    idle = setTimeout(() => {
+      if (on && !document.hidden) spawn(40 + Math.random() * (W - 80), H * .3 + Math.random() * H * .35, 60 + Math.random() * 90, Math.random() * Math.PI * 2);
+      if (on) schedule();
+    }, 1800 + Math.random() * 2400);
+  }
+  schedule();
+  hero.addEventListener('pointermove', e => {
+    const now = performance.now();
+    if (now - lastMove < 90 || Math.random() > .4) return;
+    lastMove = now;
+    const r = hero.getBoundingClientRect();
+    const x = e.clientX - r.left, y = e.clientY - r.top;
+    const sx = x - 30 - Math.random() * 60, sy = y + (Math.random() - .5) * 50;
+    spawn(sx, sy, 40 + Math.random() * 55, Math.atan2(y - sy, x - sx));
+  });
+  cleanups.push(() => { vio.disconnect(); clearTimeout(idle); cancelAnimationFrame(raf); });
+}
+
+/* ============ VOLT GAUGE ============ */
+(function initGauge(){
+  const ticks = $('#gticks'), gv = $('#gv'), g = $('#gauge');
+  for (let i = 0; i < 12; i++) ticks.appendChild(document.createElement('i'));
+  const segs = [...ticks.children];
+  let ticking = false;
+  function upd(){
+    ticking = false;
+    const max = document.documentElement.scrollHeight - innerHeight;
+    const p = max > 0 ? Math.min(1, scrollY / max) : 1;
+    const n = Math.round(p * 12);
+    segs.forEach((s, i) => s.classList.toggle('f', i < n));
+    g.classList.toggle('full', p >= .995);
+    gv.textContent = p >= .995 ? 'FULL' : Math.round(p * 100) + '%';
+  }
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(upd); } }, { passive:true });
+  addEventListener('resize', upd);
+  upd();
+})();
+
+/* ============ MENU ============ */
+const burger = $('#burger'), menu = $('#menu');
+function openMenu(){
+  menu.classList.add('open'); menu.setAttribute('aria-hidden','false');
+  burger.setAttribute('aria-expanded','true'); burger.setAttribute('aria-label','Close menu');
+  document.documentElement.classList.add('lock');
+  const f = menu.querySelector('a'); if (f) f.focus();
+}
+function closeMenu(){
+  menu.classList.remove('open'); menu.setAttribute('aria-hidden','true');
+  burger.setAttribute('aria-expanded','false'); burger.setAttribute('aria-label','Open menu');
+  document.documentElement.classList.remove('lock');
+}
+burger.addEventListener('click', () => menu.classList.contains('open') ? closeMenu() : openMenu());
+addEventListener('keydown', e => { if (e.key === 'Escape' && menu.classList.contains('open')) { closeMenu(); burger.focus(); } });
+$('#msoc').innerHTML = SOCIALS.map(s =>
+  '<a href="' + s.url + '" target="_blank" rel="noopener" aria-label="' + s.label + '">' + ICO[s.k] + '</a>').join('');
+
+/* ============ MISC ============ */
+$('#yr').textContent = new Date().getFullYear();
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-retry]');
+  if (b) { b.textContent = 'retrying…'; loadGH(true); }
+});
+function ldtext(t){ const el = $('#ldtxt'); if (el) el.textContent = t; }
+const ldStart = Date.now();
+function hideLoader(){
+  const wait = Math.max(0, 650 - (Date.now() - ldStart));
+  setTimeout(() => { $('#ld').classList.add('off'); $('#hw') && $('#hw').classList.add('go'); }, wait);
+}
+Promise.race([loadGH().catch(() => {}), new Promise(res => setTimeout(res, 4500))]).then(hideLoader);
+setTimeout(() => { if (GH.ready === '') { GH.ready = 'error'; GH.error = 'The GitHub API is slow to answer. The page still works; retry the sections that matter.'; notify(); } }, 5200);
+addEventListener('hashchange', () => render(false));
+render(true);
+</script>
+<!-- ===== BLITZ ENHANCE PATCH · paste this whole block right before </body> ===== -->
+<style id="enh-css">
+/* ---- press feedback, focus, tap targets ---- */
+.btn,.chip,.ext,.ibtn,.lrow{touch-action:manipulation}
+.btn:active,.chip:active,.ext:active,.ibtn:active{transform:scale(.96)}
+.chip{display:inline-flex;align-items:center;gap:8px}
+.chip svg{width:9px;height:12px}
+.cdot{width:7px;height:7px;border-radius:50%;flex:none}
+
+/* ---- spotlight follows pointer on project rows ---- */
+.proj::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .3s;
+  background:radial-gradient(380px circle at var(--mx,50%) var(--my,50%),rgba(245,224,3,.075),transparent 62%)}
+.proj:hover::before{opacity:1}
+
+/* ---- skeleton shimmer for loading states ---- */
+.dstat{position:relative;overflow:hidden}
+.dstat::after{content:"";position:absolute;inset:0;transform:translateX(-100%);
+  background:linear-gradient(90deg,transparent,rgba(245,224,3,.06),transparent);animation:enhsh 1.4s infinite}
+@keyframes enhsh{to{transform:translateX(100%)}}
+
+/* ---- back to top ---- */
+#totop{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));z-index:80;
+  width:46px;height:46px;display:grid;place-items:center;background:var(--bg);border:1px solid var(--line2);color:var(--volt);
+  opacity:0;transform:translateY(14px);pointer-events:none;transition:opacity .3s,transform .35s var(--e),border-color .2s}
+#totop.show{opacity:1;transform:none;pointer-events:auto}
+#totop:hover{border-color:var(--volt)}
+#totop svg{width:18px;height:18px;transform:rotate(-90deg)}
+
+/* ---- mobile menu: not focusable while closed, true viewport height ---- */
+#menu{height:100vh;height:100dvh;overflow-y:auto}
+#menu:not(.open){visibility:hidden;transition:transform .5s var(--e),visibility 0s .5s}
+#menu.open{visibility:visible}
+
+/* ---- MOBILE: filter bar, hero, rows ---- */
+@media(max-width:720px){
+  .fbar{position:sticky;top:62px;z-index:50;flex-direction:column;align-items:stretch;gap:10px;
+    margin:24px calc(var(--pad)*-1) 0;padding:12px var(--pad);
+    background:rgba(11,11,12,.92);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .chips{flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none;
+    margin:0 calc(var(--pad)*-1);padding:0 var(--pad);-webkit-overflow-scrolling:touch}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{flex:none;scroll-snap-align:start;min-height:40px}
+  .fsort{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px}
+  .fsort input,.fsort select{width:100%;min-width:0;min-height:44px;font-size:16px}
+  .fsort select{max-width:50vw;text-overflow:ellipsis}
+  .fsort{width:100%}
+  .proj{padding:22px 0}
+  .pmeta .ext{min-height:36px}
+}
+@media(max-width:560px){
+  .hero{padding-top:104px}
+  .hstats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+  .hs .v{overflow-wrap:anywhere}
+  .hcta .btn{flex:1 1 calc(50% - 7px);justify-content:center;min-height:48px}
+  .hcta .btn.pri{flex-basis:100%}
+  .lrow{grid-template-columns:minmax(0,1fr) auto}
+  .lrow .met{grid-column:1/-1;order:3}
+  .pn{grid-template-columns:1fr}
+  .pn a:last-child{text-align:left}
+  .gcard .top{flex-wrap:wrap}
+  .bcbolt{display:none}
+  .frow{flex-direction:column;gap:10px}
+  .spec .sk{width:96px}
+}
+/* live-row: keep the dot inline with the text instead of orphaned on its own line */
+.live-row{display:block;line-height:1.9}
+.live-row .dotp{margin-right:10px;vertical-align:middle}
+@media(hover:none){.proj::before{display:none}}
+@media(prefers-reduced-motion:reduce){.dstat::after{animation:none}#totop{transition:none}}
+
+/* ---- role row (replaces the "live feed" line) ---- */
+.role-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-family:var(--fm);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+.role-row b{color:var(--mut);font-weight:500}
+.role-row .rb{width:12px;height:17px;fill:var(--volt);animation:zap 2.6s infinite}
+#rot{color:var(--volt);display:inline-block;min-width:1ch;transition:opacity .3s,transform .3s}
+#rot.sw{opacity:0;transform:translateY(7px)}
+#rot::after{content:"";display:inline-block;width:7px;height:1em;margin-left:6px;vertical-align:-.15em;background:var(--volt);animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+@keyframes zap{0%,86%,100%{opacity:1;transform:none}90%{opacity:.2}93%{opacity:1;transform:scale(1.25) rotate(-6deg)}}
+.inb svg{width:.7em;height:.95em;fill:var(--volt);vertical-align:-.12em;animation:zap 2.6s infinite}
+.hs .k svg{width:10px;height:10px;margin-right:6px;vertical-align:-1px;fill:currentColor}
+/* ---- stack ---- */
+.stk{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(18px,3vw,40px)}
+.stk-main{position:relative;overflow:hidden;border:1px solid var(--line2);padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:14px}
+.stk-main::after{content:"";position:absolute;left:0;top:0;width:100%;height:2px;background:linear-gradient(90deg,transparent,var(--volt),transparent);animation:scan 4.5s var(--e) infinite}
+@keyframes scan{0%{transform:translateY(0);opacity:0}10%{opacity:1}100%{transform:translateY(340px);opacity:0}}
+.stk-tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--fm);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--volt)}
+.stk-tag svg{width:10px;height:14px;fill:var(--volt)}
+.stk-main img{width:64px;height:64px;animation:flt 4.2s ease-in-out infinite}
+@keyframes flt{50%{transform:translateY(-8px) rotate(-4deg)}}
+.stk-main h3{font-size:clamp(40px,6vw,68px);font-weight:700;letter-spacing:-.04em;line-height:1}
+.stk-main p{color:var(--mut);max-width:34ch}
+.stk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);align-content:start}
+.stk-i{background:var(--bg);padding:18px 14px;display:flex;flex-direction:column;gap:12px;align-items:flex-start;transition:background .25s}
+.stk-i:hover{background:var(--bg2)}
+.stk-i img{width:30px;height:30px;transition:transform .4s var(--e)}
+.stk-i img.inv{filter:invert(1)}
+.stk-i:hover img,.stk-i:hover .more svg{transform:translateY(-5px) rotate(-8deg) scale(1.12)}
+.stk-i span{font-family:var(--fm);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+.stk-i .more svg{width:22px;height:30px;fill:var(--volt);transition:transform .4s var(--e)}
+@media(max-width:860px){.stk{grid-template-columns:1fr}}
+/* ---- ventures ---- */
+.vgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:28px;position:relative}
+.vc{display:flex;align-items:center;gap:12px;border:1px solid var(--line2);padding:16px 18px;font-weight:600;letter-spacing:-.01em;background:var(--bg);transition:border-color .25s,transform .3s var(--e)}
+.vc svg{width:15px;height:20px;fill:var(--volt);transition:transform .3s var(--e)}
+.vc:hover{border-color:var(--volt);transform:translateY(-3px)}
+.vc:hover svg{transform:rotate(-12deg) scale(1.2)}
+@media(max-width:720px){.vgrid{grid-template-columns:1fr}}
+/* ---- extra motion ---- */
+.btn.pri{position:relative;overflow:hidden}
+.btn.pri::after{content:"";position:absolute;top:0;left:-70%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg);animation:shine 5s infinite 1.5s}
+@keyframes shine{0%,70%{left:-70%}100%{left:140%}}
+.hs{transition:background .3s}.hs:hover{background:rgba(245,224,3,.03)}
+.ibtn:hover svg{animation:wob .5s var(--e)}
+@keyframes wob{40%{transform:rotate(-12deg) scale(1.15)}}
+</style>
+
+<button id="totop" aria-label="Back to top" hidden></button>
+
+<script id="enh-js">
+(function(){
+'use strict';
+/* 0 (registered at the bottom) · FIX: on a first visit (no cache) the page stayed on "connecting to the feed" forever,
+   because nothing was subscribed to re-render once the GitHub data arrived */
+/* 1 · FIX: clicking a language row set ?f=… but the Projects page never read it */
+const origProjects = PAGES.projects.html;
+PAGES.projects.html = function(r){
+  const f = r && r.q && r.q.f;
+  if (f) { fLang = f; fq = ''; } else if (r && r.q && !f && location.hash === '#/projects') { fLang = 'ALL'; }
+  return withErr(origProjects(r));
+};
+
+/* 2 · FIX: projects + detail pages spun forever when the GitHub feed failed */
+function withErr(html){
+  return GH.ready === 'error'
+    ? html.replace(/<div class="dstat"[^>]*>[\s\S]*?<\/div>/, derrBox())
+    : html;
+}
+const origDetail = PAGES.detail.html;
+PAGES.detail.html = a => withErr(origDetail(a));
+
+/* 3 · FIX: retry now re-renders the current page once data lands */
+document.addEventListener('click', e => {
+  if (e.target.closest('[data-retry]')) subs.add(() => render(true));
+});
+
+/* 4 · FIX: hero title stayed hidden when navigating back to Home */
+const origHomeAfter = PAGES.home.after;
+PAGES.home.after = function(root, r){
+  origHomeAfter(root, r);
+  (function(){ const el = root.querySelector('#rot'); if (!el || RM) return;
+    const w = ['Software developer','Founder','Python first','I build · I ship']; let i = 0;
+    const id = setInterval(() => { el.classList.add('sw'); setTimeout(() => { i = (i+1) % w.length; el.textContent = w[i]; el.classList.remove('sw'); }, 300); }, 2600);
+    cleanups.push(() => clearInterval(id)); })();
+  const hw = root.querySelector('#hw');
+  if (hw) requestAnimationFrame(() => requestAnimationFrame(() => hw.classList.add('go')));
+};
+
+/* 5 · UI: decorate filter chips with icons, keep active chip in view on mobile */
+const view = document.getElementById('view');
+function decorate(){
+  view.querySelectorAll('.chip:not([data-dec])').forEach(c => {
+    c.dataset.dec = 1;
+    const n = c.dataset.chip;
+    c.insertAdjacentHTML('afterbegin', n === 'ALL' ? I.bolt : '<i class="cdot" style="background:' + (LANGC[n] || '#6F6F69') + '"></i>');
+  });
+  const pq = view.querySelector('#pq'); if (pq && matchMedia('(max-width:720px)').matches) pq.placeholder = 'search';
+  const on = view.querySelector('.chip.on');
+  if (on && on.parentElement && on.parentElement.scrollWidth > on.parentElement.clientWidth)
+    on.scrollIntoView({ inline:'center', block:'nearest', behavior:'auto' });
+}
+new MutationObserver(decorate).observe(view, { childList:true, subtree:true });
+view.addEventListener('click', e => {
+  const c = e.target.closest('.chip');
+  if (c) c.scrollIntoView({ inline:'center', block:'nearest', behavior: RM ? 'auto' : 'smooth' });
+});
+
+/* 6 · UX: pointer spotlight on project rows */
+view.addEventListener('pointermove', e => {
+  const p = e.target.closest && e.target.closest('.proj');
+  if (!p) return;
+  const b = p.getBoundingClientRect();
+  p.style.setProperty('--mx', (e.clientX - b.left) + 'px');
+  p.style.setProperty('--my', (e.clientY - b.top) + 'px');
+}, { passive:true });
+
+/* 7 · UX: back-to-top with bolt icon */
+const t = document.getElementById('totop');
+t.hidden = false; t.innerHTML = I.ar;
+t.addEventListener('click', () => scrollTo({ top:0, behavior: RM ? 'auto' : 'smooth' }));
+let tk = false;
+addEventListener('scroll', () => {
+  if (tk) return; tk = true;
+  requestAnimationFrame(() => { t.classList.toggle('show', scrollY > 700); tk = false; });
+}, { passive:true });
+
+/* 8 · UX: press "/" on the project index to jump to search */
+addEventListener('keydown', e => {
+  const q = document.getElementById('pq');
+  if (e.key === '/' && q && !/INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName)) { e.preventDefault(); q.focus(); }
+});
+
+/* re-render the current route so fixes 1, 2, 4 apply to the page already on screen */
+render(true);
+if (GH.ready === '') subs.add(() => render(true)); /* 0 · must come AFTER render(), which clears subs */
+decorate();
+})();
+</script>
+<!-- ===== END BLITZ ENHANCE PATCH ===== -->
+
+</body>
+</html>
